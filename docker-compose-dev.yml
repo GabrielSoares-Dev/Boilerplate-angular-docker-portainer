@@ -1,0 +1,18 @@
+version: '3.5'
+services:
+  boilerplate-angular:
+    container_name: boilerplate-angular
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+     - .:/app
+     - boilerplate-angular-volume:/app/node_modules
+    ports:
+      - 4200:4200
+    stdin_open: true
+    tty: true
+
+volumes:
+   boilerplate-angular-volume:
+
