@@ -6,13 +6,12 @@ services:
       context: .
       dockerfile: Dockerfile.dev
     volumes:
-     - .:/app
-     - boilerplate-angular-volume:/app/node_modules
+      - .:/app
+      - boilerplate-angular-volume:/app/node_modules
     ports:
       - 4200:4200
     stdin_open: true
     tty: true
 
 volumes:
-   boilerplate-angular-volume:
-
+  boilerplate-angular-volume:
