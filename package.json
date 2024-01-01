@@ -3,16 +3,17 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host 0.0.0.0 --poll 2000 --disable-host-check",
+    "start:dev": "ng serve --host 0.0.0.0 --poll 2000 --disable-host-check",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
     "server:up": "docker-compose -f docker-compose-dev.yml up -d",
     "lint:test": "ng lint",
     "lint:fix": "ng lint --fix",
     "prettier": "npx prettier --write .",
     "prepare": "husky install",
-    "commit": "cz"
+    "commit": "cz",
+    "test": "ng test",
+    "test:coverage": "ng test --no-watch --code-coverage"
   },
   "private": true,
   "dependencies": {
@@ -39,6 +40,7 @@
     "@angular-eslint/template-parser": "17.1.1",
     "@angular/cli": "^17.0.8",
     "@angular/compiler-cli": "^17.0.0",
+    "@angular/localize": "^17.0.8",
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
     "@types/jasmine": "~5.1.0",
