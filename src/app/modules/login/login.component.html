@@ -1,2 +1,28 @@
-<p>login works!</p>
-<app-button></app-button>
+<section class="flex justify-center items-center h-full w-full">
+  <form method="post" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="email">Email</label>
+      <input
+        class="form-input rounded-lg"
+        type="text"
+        id="email"
+        name="email"
+        formControlName="email" />
+    </div>
+    <div>
+      <label for="password">Senha</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        formControlName="password" />
+    </div>
+    <div>
+      <button
+        type="button"
+        class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+        Button
+      </button>
+    </div>
+  </form>
+</section>
