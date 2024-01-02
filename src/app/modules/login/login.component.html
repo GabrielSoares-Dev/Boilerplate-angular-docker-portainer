@@ -1,2 +1,27 @@
-<p>login works!</p>
-<app-button></app-button>
+<section class="login-container">
+  <form method="post" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="email">Email</label>
+      <input
+        class="form-input rounded-lg"
+        type="text"
+        id="email"
+        name="email"
+        formControlName="email" />
+    </div>
+    <div>
+      <label for="password">Senha</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        formControlName="password" />
+    </div>
+    <div>
+      <app-button
+        label="Entrar"
+        [isLoading]="false"
+        [onClick]="onSubmit"></app-button>
+    </div>
+  </form>
+</section>
