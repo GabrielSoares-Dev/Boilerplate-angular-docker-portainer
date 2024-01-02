@@ -16,7 +16,9 @@ export class LoginComponent implements OnInit, OnDestroy {
     });
   }
 
-  onSubmit() {}
+  onSubmit() {
+    console.log('oi');
+  }
 
   protected resetForm() {
     this.form.reset();
