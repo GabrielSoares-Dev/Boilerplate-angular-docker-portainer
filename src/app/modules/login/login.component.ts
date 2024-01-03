@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
-    console.log('oi');
+    console.log(this.form.get('password'));
   }
 
   protected resetForm() {

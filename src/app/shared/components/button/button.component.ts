@@ -12,11 +12,8 @@ export class ButtonComponent {
   @Input() variant: ButtonVariant = 'primary';
   @Input() label = '';
   @Input() isLoading = false;
-  @Input() onClick?: () => void;
-
-  handleClick() {
-    if (this.onClick) this.onClick();
-  }
+  @Input() type = 'button';
+  @Input() onClick: () => void = () => {};
 
   isPrimary() {
     return this.variant === 'primary';

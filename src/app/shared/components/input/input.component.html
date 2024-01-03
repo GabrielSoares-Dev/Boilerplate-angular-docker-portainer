@@ -1,0 +1,15 @@
+<div class="container-input">
+  <div [formGroup]="formGroup!">
+    <label [for]="id" class="input-label">{{ label }}</label>
+    <input
+      [id]="id"
+      [type]="type"
+      [readOnly]="readOnly"
+      [disabled]="disabled"
+      class="input"
+      [placeholder]="placeholder"
+      [formControlName]="formControlName"
+      (input)="emitInputEvent($event)" />
+    <ng-content></ng-content>
+  </div>
+</div>
