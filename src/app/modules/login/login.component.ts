@@ -1,6 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { ToastService } from '@services/toast/toast.service';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +7,7 @@ import { ToastService } from '@services/toast/toast.service';
   styleUrl: './login.component.css',
 })
 export class LoginComponent implements OnInit, OnDestroy {
-  constructor(private toast: ToastService) {}
+  constructor() {}
   form!: FormGroup;
 
   ngOnInit(): void {
@@ -18,9 +17,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     });
   }
 
-  onSubmit() {
-    this.toast.warning('oi', 'test');
-  }
+  onSubmit() {}
 
   protected resetForm() {
     this.form.reset();
