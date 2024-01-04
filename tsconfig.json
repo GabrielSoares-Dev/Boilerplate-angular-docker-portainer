@@ -39,6 +39,12 @@
       "@services/*": [
         "./src/app/core/services/*"
       ],
+      "@dtos/*": [
+        "./src/app/core/dtos/*"
+      ],
+      "@interfaces/*": [
+        "./src/app/core/interfaces/*"
+      ],
       "@modules/*": [
         "./src/app/modules/*"
       ],
