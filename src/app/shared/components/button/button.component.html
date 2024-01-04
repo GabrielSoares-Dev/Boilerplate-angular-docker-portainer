@@ -1,18 +1,17 @@
 <button
+  [type]="type"
   [disabled]="disabled"
   [class.pointer-events-none]="isLoading"
-  (click)="handleClick()"
+  (click)="onClick()"
   [ngClass]="{
     'button-primary': isPrimary(),
     'button-secondary': isSecondary()
-  }"
-  class="btn-primary">
+  }">
   <div *ngIf="isLoading" class="button-loading-container">
     <ng-icon name="cssSpinner" class="button-loading-icon"></ng-icon>
     Processando...
   </div>
   <div *ngIf="!isLoading">
-    <ng-content></ng-content>
     {{ label }}
   </div>
 </button>

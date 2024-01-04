@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 type ButtonVariant = 'primary' | 'secondary';
 
@@ -12,10 +12,11 @@ export class ButtonComponent {
   @Input() variant: ButtonVariant = 'primary';
   @Input() label = '';
   @Input() isLoading = false;
-  @Input() onClick?: () => void;
+  @Input() type = 'button';
+  @Output() clickEvent = new EventEmitter();
 
-  handleClick() {
-    if (this.onClick) this.onClick();
+  onClick() {
+    this.clickEvent.emit();
   }
 
   isPrimary() {

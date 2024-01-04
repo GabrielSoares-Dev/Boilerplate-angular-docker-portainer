@@ -1,27 +1,33 @@
 <section class="login-container">
-  <form method="post" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <form
+    class="card-login"
+    method="post"
+    [formGroup]="form"
+    autocomplete="off"
+    (ngSubmit)="onSubmit()">
     <div>
-      <label for="email">Email</label>
-      <input
-        class="form-input rounded-lg"
-        type="text"
+      <app-input
         id="email"
-        name="email"
-        formControlName="email" />
+        formControlName="email"
+        label="Email"
+        placeholder="exemplo@gmail.com">
+      </app-input>
     </div>
     <div>
-      <label for="password">Senha</label>
-      <input
-        type="password"
+      <app-input
         id="password"
-        name="password"
-        formControlName="password" />
+        formControlName="password"
+        label="Senha"
+        placeholder="******">
+      </app-input>
     </div>
-    <div>
+    <div class="w-full">
       <app-button
+        type="submit"
         label="Entrar"
         [isLoading]="false"
-        [onClick]="onSubmit"></app-button>
+        (clickEvent)="onSubmit()"></app-button>
     </div>
   </form>
+  <button (click)="onSubmit()">test</button>
 </section>

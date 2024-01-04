@@ -1,0 +1,14 @@
+.container-input {
+    @apply mx-auto max-w-xs;
+}
+
+.input {
+  @apply read-only:disabled:bg-gray-50 read-only:disabled:text-gray-500 read-only:disabled:cursor-not-allowed;
+  @apply block w-full;
+  @apply rounded-md border-gray-300 shadow-sm;
+}
+
+.input-label {
+    @apply text-sm font-medium text-gray-700;
+    @apply mb-1 block;
+}
