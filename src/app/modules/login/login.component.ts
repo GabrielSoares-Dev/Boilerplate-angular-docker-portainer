@@ -17,7 +17,9 @@ export class LoginComponent implements OnInit, OnDestroy {
     });
   }
 
-  onSubmit() {}
+  onSubmit() {
+    console.log(this.form.value);
+  }
 
   protected resetForm() {
     this.form.reset();
@@ -25,5 +27,13 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.resetForm();
+  }
+
+  getControl(name: string) {
+    return this.form.get(name) as FormControl;
+  }
+
+  change() {
+    console.log(this.form.get('email')?.value);
   }
 }

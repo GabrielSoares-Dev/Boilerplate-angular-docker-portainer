@@ -6,9 +6,7 @@
     @apply disabled:opacity-50 disabled:pointer-events-none;
     @apply py-3 px-4  gap-x-2;
     @apply w-full h-full;
-    @apply transition-all;
 } 
-
 .button-secondary {
     @apply bg-white  hover:bg-gray-100 shadow-sm; 
     @apply text-sm font-semibold text-gray-700 text-center;
@@ -16,7 +14,6 @@
     @apply disabled:pointer-events-none disabled:border-gray-100 disabled:bg-gray-50 disabled:text-gray-400;
     @apply px-5 py-2.5  gap-x-2;
     @apply w-full h-full;
-    @apply transition-all;
 } 
 
 .button-loading-container {
@@ -27,4 +24,3 @@
     @apply animate-spin;
     @apply text-xl;
 }
-

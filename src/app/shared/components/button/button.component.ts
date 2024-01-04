@@ -12,7 +12,7 @@ export class ButtonComponent {
   @Input() variant: ButtonVariant = 'primary';
   @Input() label = '';
   @Input() isLoading = false;
-  @Input() type = 'button';
+  @Input() mode = 'button';
   @Output() clickEvent = new EventEmitter();
 
   onClick() {

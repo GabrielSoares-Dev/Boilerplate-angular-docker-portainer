@@ -1,9 +1,18 @@
 
 .login-container {
-    @apply flex justify-center items-center h-full w-full;
+    @apply  h-full w-full;
+}
+.card-login-container {
+    @apply flex justify-center items-center h-full;
+}
+.card-login {
+    @apply w-96;
+    @apply flex  flex-col gap-6 p-7;
+    @apply border-2 border-gray-300 rounded-lg;
+    @apply shadow-lg;
+    @apply bg-white;
 }
 
-
-.card-login {
-    @apply flex flex-col gap-6;
+.card-login-title {
+    @apply text-2xl font-bold text-gray-700;
 }
