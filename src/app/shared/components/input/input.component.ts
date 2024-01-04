@@ -1,5 +1,4 @@
-import { Component, Input, EventEmitter } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -12,13 +11,11 @@ export class InputComponent {
   @Input() placeholder = '';
   @Input() type = 'text';
   @Input() label = '';
-  @Input() formControlName = '';
   @Input() readOnly = false;
   @Input() disabled = false;
-  @Input() formGroup?: FormGroup;
-  @Input() onInput = new EventEmitter();
+  // @Input() onInput = new EventEmitter();
 
-  emitInputEvent(event: Event) {
-    this.onInput.emit(event);
-  }
+  // emitInputEvent(event: Event) {
+  //   this.onInput.emit(event);
+  // }
 }

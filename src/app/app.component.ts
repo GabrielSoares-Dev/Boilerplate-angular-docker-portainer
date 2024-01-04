@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { LoginModule } from '@modules/login/login.module';
+import { SharedModule } from '@shared/shared.module';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, LoginModule],
+  imports: [SharedModule, RouterOutlet, LoginModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
