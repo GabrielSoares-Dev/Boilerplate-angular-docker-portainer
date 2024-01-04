@@ -1,8 +1,9 @@
 <button
-  [type]="type"
+  [type]="mode"
   [disabled]="disabled"
   [class.pointer-events-none]="isLoading"
   (click)="onClick()"
+  class="button-primary"
   [ngClass]="{
     'button-primary': isPrimary(),
     'button-secondary': isSecondary()

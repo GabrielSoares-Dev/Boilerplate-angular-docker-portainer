@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -9,13 +10,30 @@ import { Component, Input } from '@angular/core';
 export class InputComponent {
   @Input() id = '';
   @Input() placeholder = '';
-  @Input() type = 'text';
+  @Input() mode = 'text';
   @Input() label = '';
   @Input() readOnly = false;
   @Input() disabled = false;
-  // @Input() onInput = new EventEmitter();
+  @Input() control = new FormControl();
 
-  // emitInputEvent(event: Event) {
-  //   this.onInput.emit(event);
-  // }
+  @Output() changeEvent = new EventEmitter();
+  @Output() keyupEvent = new EventEmitter();
+  @Output() keydownEvent = new EventEmitter();
+  @Output() inputEvent = new EventEmitter();
+
+  onChange() {
+    this.changeEvent.emit();
+  }
+
+  onKeyup() {
+    this.keyupEvent.emit();
+  }
+
+  onKeydown() {
+    this.keydownEvent.emit();
+  }
+
+  onInput() {
+    this.inputEvent.emit();
+  }
 }
