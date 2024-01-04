@@ -5,7 +5,9 @@ import { InputComponent } from '@shared/components/input/input.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgIconsModule } from '@ng-icons/core';
 import { cssSpinner } from '@ng-icons/css.gg';
+
 import { ToastService } from '@services/toast/toast.service';
+import { ThemeService } from '@services/theme/theme.service';
 import {
   ToastrModule as ToastLibModule,
   ToastrService as ToastLibService,
@@ -21,6 +23,6 @@ import {
     ToastLibModule.forRoot({ autoDismiss: true, maxOpened: 1 }),
   ],
   exports: [ButtonComponent, InputComponent, FormsModule, ReactiveFormsModule],
-  providers: [ToastLibService, ToastService],
+  providers: [ToastLibService, ToastService, ThemeService],
 })
 export class SharedModule {}
