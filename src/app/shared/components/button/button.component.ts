@@ -11,7 +11,7 @@ export class ButtonComponent {
   @Input() disabled = false;
   @Input() variant: ButtonVariant = 'primary';
   @Input() label = '';
-  @Input() isLoading = false;
+  @Input() isLoading: boolean | null = false;
   @Input() mode = 'button';
   @Output() clickEvent = new EventEmitter();
 

@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '@environments';
+import type {
+  InputLoginServiceDto,
+  OutputLoginServiceDto,
+} from '@dtos/auth.dto';
 
 @Injectable({
   providedIn: 'root',
@@ -10,9 +14,12 @@ export class AuthService {
 
   protected apiUrl = environment.api;
 
-  login(input: unknown) {
+  login(input: InputLoginServiceDto) {
     const body = input;
 
-    return this.http.post(`${this.apiUrl}`, body);
+    return this.http.post<OutputLoginServiceDto>(
+      `${this.apiUrl}/v1/auth/login`,
+      body
+    );
   }
 }

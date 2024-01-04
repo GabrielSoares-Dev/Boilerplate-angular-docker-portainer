@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { LoginDataSource } from './login.datasource';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +8,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrl: './login.component.css',
 })
 export class LoginComponent implements OnInit, OnDestroy {
-  constructor() {}
+  constructor(public dataSource: LoginDataSource) {}
   form!: FormGroup;
 
   ngOnInit(): void {
@@ -18,7 +19,10 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
-    console.log(this.form.value);
+    const email = this.form.get('email')?.value;
+    const password = this.form.get('password')?.value;
+
+    this.dataSource.login(email, password);
   }
 
   protected resetForm() {
@@ -27,6 +31,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.resetForm();
+    this.dataSource.disconnectDataSource();
   }
 
   getControl(name: string) {
