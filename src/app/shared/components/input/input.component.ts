@@ -14,6 +14,8 @@ export class InputComponent {
   @Input() label = '';
   @Input() readOnly = false;
   @Input() disabled = false;
+  @Input() hasError = false;
+  @Input() errorMessage = '';
   @Input() control = new FormControl();
 
   @Output() changeEvent = new EventEmitter();

@@ -32,8 +32,4 @@ export class LoginComponent implements OnInit, OnDestroy {
   getControl(name: string) {
     return this.form.get(name) as FormControl;
   }
-
-  change() {
-    console.log(this.form.get('email')?.value);
-  }
 }

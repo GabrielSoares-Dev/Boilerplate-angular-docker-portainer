@@ -12,3 +12,16 @@
     @apply text-sm font-medium text-gray-700;
     @apply mb-1 block;
 }
+
+.input-has-error{
+  @apply border-red-500 focus:active:border-red-500 ;
+}
+
+.input-container-error-message{
+  @apply mt-1 ml-1;
+}
+
+
+.input-error-message{
+  @apply text-base text-red-500 font-medium;
+}
