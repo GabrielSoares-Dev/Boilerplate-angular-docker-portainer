@@ -7,7 +7,7 @@ import { UserDto, UserDtoTokenDecoded } from '@dtos/user.dto';
   providedIn: 'root',
 })
 export class UserService {
-  constructor(private cookie: CookieService) { }
+  constructor(private cookie: CookieService) {}
 
   getCurrent(): UserDto {
     const token = this.cookie.get('token');

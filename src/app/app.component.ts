@@ -14,7 +14,7 @@ import { ThemeService } from '@services/theme/theme.service';
   styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
-  constructor(public themeService: ThemeService) {}
+  constructor(private themeService: ThemeService) {}
 
   ngOnInit() {
     const notHaveTheme = !localStorage.getItem('theme');
