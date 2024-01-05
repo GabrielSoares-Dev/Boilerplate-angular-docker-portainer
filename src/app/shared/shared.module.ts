@@ -8,10 +8,14 @@ import { cssSpinner } from '@ng-icons/css.gg';
 
 import { ToastService } from '@services/toast/toast.service';
 import { ThemeService } from '@services/theme/theme.service';
+import { CookieService } from '@services/cookie/cookie.service';
+import { UserService } from '@services/user/user.service';
+
 import {
   ToastrModule as ToastLibModule,
   ToastrService as ToastLibService,
 } from 'ngx-toastr';
+import { CookieService as CookieLibService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [ButtonComponent, InputComponent],
@@ -23,6 +27,14 @@ import {
     ToastLibModule.forRoot({ autoDismiss: true, maxOpened: 1 }),
   ],
   exports: [ButtonComponent, InputComponent, FormsModule, ReactiveFormsModule],
-  providers: [ToastLibService, ToastService, ThemeService],
+  providers: [
+    ToastLibService,
+    CookieLibService,
+
+    ToastService,
+    ThemeService,
+    CookieService,
+    UserService,
+  ],
 })
 export class SharedModule {}
