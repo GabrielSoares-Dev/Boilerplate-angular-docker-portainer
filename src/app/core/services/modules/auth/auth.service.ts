@@ -4,7 +4,7 @@ import { environment } from '@environments';
 import type {
   InputLoginServiceDto,
   OutputLoginServiceDto,
-  OutputLogoutServiceDto
+  OutputLogoutServiceDto,
 } from '@dtos/auth.dto';
 
 @Injectable({

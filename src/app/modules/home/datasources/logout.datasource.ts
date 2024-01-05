@@ -12,7 +12,7 @@ export class LogoutDataSource {
     private toast: ToastService,
     private cookie: CookieService,
     private router: Router
-  ) { }
+  ) {}
   protected OnDestroy = new Subject<void>();
 
   isLoading = new BehaviorSubject(false);
@@ -23,8 +23,8 @@ export class LogoutDataSource {
   }
 
   protected onSuccess() {
-    const loginPath = ''
-    
+    const loginPath = '';
+
     this.cookie.delete('token');
     this.router.navigate([loginPath]);
   }

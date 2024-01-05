@@ -1,4 +1,7 @@
-import type { BaseResponseInterface, BaseResponseInterfaceWithContent } from '@interfaces/base-response.interface';
+import type {
+  BaseResponseInterface,
+  BaseResponseInterfaceWithContent,
+} from '@interfaces/base-response.interface';
 
 export interface InputLoginServiceDto {
   email: string;
@@ -10,12 +13,11 @@ type ContentLogin = {
 };
 
 export interface OutputLoginServiceDto
-  extends BaseResponseInterfaceWithContent<ContentLogin> { }
+  extends BaseResponseInterfaceWithContent<ContentLogin> {}
 
 export interface InputLoginUseCaseDto {
   email: string;
   password: string;
 }
 
-export interface OutputLogoutServiceDto
-  extends BaseResponseInterface { }
+export interface OutputLogoutServiceDto extends BaseResponseInterface {}

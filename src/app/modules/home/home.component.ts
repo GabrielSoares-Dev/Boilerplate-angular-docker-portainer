@@ -8,7 +8,10 @@ import { LogoutDataSource } from './datasources/logout.datasource';
   styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit {
-  constructor(private readonly UserService: UserService, public logoutDataSource: LogoutDataSource) { }
+  constructor(
+    private readonly UserService: UserService,
+    public logoutDataSource: LogoutDataSource
+  ) {}
   name = '';
 
   ngOnInit() {
@@ -18,6 +21,6 @@ export class HomeComponent implements OnInit {
   }
 
   logout() {
-    this.logoutDataSource.logout()
+    this.logoutDataSource.logout();
   }
 }

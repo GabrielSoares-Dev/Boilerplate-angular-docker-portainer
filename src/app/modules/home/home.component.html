@@ -3,6 +3,9 @@
     <h2 class="home-message">Bem vindo {{ name }}</h2>
   </div>
   <div class="logout-button-wrapper">
-    <app-button [isLoading]="logoutDataSource.isLoading | async" label="Sair" (clickEvent)="logout()"></app-button>
+    <app-button
+      [isLoading]="logoutDataSource.isLoading | async"
+      label="Sair"
+      (clickEvent)="logout()"></app-button>
   </div>
 </section>
