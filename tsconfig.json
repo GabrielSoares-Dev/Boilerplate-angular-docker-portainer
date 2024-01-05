@@ -42,6 +42,9 @@
       "@dtos/*": [
         "./src/app/core/dtos/*"
       ],
+      "@guards/*": [
+        "./src/app/core/guards/*"
+      ],
       "@interfaces/*": [
         "./src/app/core/interfaces/*"
       ],
