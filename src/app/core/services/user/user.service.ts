@@ -7,7 +7,7 @@ import { UserDto, UserDtoTokenDecoded } from '@dtos/user.dto';
   providedIn: 'root',
 })
 export class UserService {
-  constructor(private cookie: CookieService) {}
+  constructor(private cookie: CookieService) { }
 
   getCurrent(): UserDto {
     const token = this.cookie.get('token');
@@ -24,15 +24,19 @@ export class UserService {
     };
   }
 
-  isLogged() {
-    let isLogged: boolean;
+  isAuthenticated() {
+    let isAuthenticated: boolean;
     try {
       this.getCurrent();
-      isLogged = true;
+      isAuthenticated = true;
     } catch (error) {
-      isLogged = false;
+      isAuthenticated = false;
     }
 
-    return isLogged;
+    return isAuthenticated;
+  }
+
+  getToken() {
+    return this.cookie.get('token');
   }
 }

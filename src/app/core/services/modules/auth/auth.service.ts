@@ -4,6 +4,7 @@ import { environment } from '@environments';
 import type {
   InputLoginServiceDto,
   OutputLoginServiceDto,
+  OutputLogoutServiceDto
 } from '@dtos/auth.dto';
 
 @Injectable({
@@ -19,6 +20,15 @@ export class AuthService {
 
     return this.http.post<OutputLoginServiceDto>(
       `${this.apiUrl}/v1/auth/login`,
+      body
+    );
+  }
+
+  logout() {
+    const body = {};
+
+    return this.http.post<OutputLogoutServiceDto>(
+      `${this.apiUrl}/v1/auth/logout`,
       body
     );
   }
