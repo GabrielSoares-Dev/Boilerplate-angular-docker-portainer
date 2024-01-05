@@ -45,6 +45,9 @@
       "@guards/*": [
         "./src/app/core/guards/*"
       ],
+      "@interceptors/*": [
+        "./src/app/core/interceptors/*"
+      ],
       "@interfaces/*": [
         "./src/app/core/interfaces/*"
       ],

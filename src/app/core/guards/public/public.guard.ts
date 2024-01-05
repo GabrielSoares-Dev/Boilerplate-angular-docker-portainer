@@ -6,9 +6,9 @@ import { UserService } from '@services/user/user.service';
 export const publicGuard: CanActivateFn = () => {
   const userService = inject(UserService);
 
-  const notLogged = !userService.isLogged();
+  const notAuthenticated = !userService.isAuthenticated();
 
-  if (notLogged) return true;
+  if (notAuthenticated) return true;
 
   const routeService = inject(Router);
 
