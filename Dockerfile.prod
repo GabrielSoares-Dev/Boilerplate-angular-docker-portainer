@@ -1,0 +1,19 @@
+FROM node:18-alpine As builder
+
+WORKDIR /app
+
+COPY package*.json .
+
+RUN npm ci
+
+COPY . .
+
+RUN npm run build --prod
+
+FROM nginx:stable-alpine
+
+COPY --from=builder /app/dist/boilerplate-angular/browser /usr/share/nginx/html
+
+COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
+
+CMD ["nginx", "-g", "daemon off;"]
