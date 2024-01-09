@@ -14,12 +14,12 @@ jobs:
        - name: Setup Node
          uses: actions/setup-node@v1
          with:
-           node-version: "18.x" 
+           node-version: "18.x"
        - name: Install dependencies
          run: npm i
        - name: Check lint
          run: npm run lint:test
        - name: Check types
          run: npm run typecheck
-      #  - name: Running tests
-      #    run: npm run test:coverage:silent
+       - name: Running tests
+         run: npm run test:coverage
