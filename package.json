@@ -13,8 +13,8 @@
     "prettier": "npx prettier --write .",
     "prepare": "husky install",
     "commit": "cz",
-    "test": "ng test",
-    "test:coverage": "ng test --no-watch --code-coverage"
+    "test": "ng test --watch=false --browsers=ChromeHeadless",
+    "test:coverage": "ng test  --watch=false --browsers=ChromeHeadless --code-coverage"
   },
   "private": true,
   "dependencies": {

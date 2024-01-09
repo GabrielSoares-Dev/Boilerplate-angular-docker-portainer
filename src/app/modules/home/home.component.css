@@ -2,9 +2,6 @@
 .home-container {
   @apply flex w-full justify-between p-10;
 }
-.home-message {
-  @apply text-2xl text-gray-500 font-semibold;
-}
 
 .logout-button-wrapper {
   @apply w-44;

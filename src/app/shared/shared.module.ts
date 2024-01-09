@@ -48,6 +48,7 @@ import { HttpClient } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     TranslateModule,
+    CommonModule,
   ],
   providers: [
     ToastLibService,
