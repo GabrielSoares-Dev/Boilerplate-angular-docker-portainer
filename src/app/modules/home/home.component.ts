@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { UserService } from '@services/user/user.service';
+import { Component } from '@angular/core';
 import { LogoutDataSource } from './datasources/logout.datasource';
 
 @Component({
@@ -7,18 +6,8 @@ import { LogoutDataSource } from './datasources/logout.datasource';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent implements OnInit {
-  constructor(
-    private readonly UserService: UserService,
-    public logoutDataSource: LogoutDataSource
-  ) {}
-  name = '';
-
-  ngOnInit() {
-    const name = this.UserService.getCurrent().name;
-
-    this.name = name;
-  }
+export class HomeComponent {
+  constructor(public logoutDataSource: LogoutDataSource) {}
 
   logout() {
     this.logoutDataSource.logout();
