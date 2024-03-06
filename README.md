@@ -11,8 +11,8 @@ This is an Angular 17 boilerplate with Docker deploy and implemented authenticat
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/GabrielSoares-Dev/Boilerplate-angular.git
-    cd Boilerplate-angular
+    git clone https://github.com/GabrielSoares-Dev/Boilerplate-angular-docker-portainer.git
+    cd Boilerplate-angular-docker-portainer
     ```
 
 2. **Install Dependencies:**

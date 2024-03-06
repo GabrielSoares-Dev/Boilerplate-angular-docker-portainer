@@ -1,17 +1,17 @@
 version: '3.5'
 services:
-  boilerplate-angular:
-    container_name: boilerplate-angular
+  Boilerplate-angular-docker-portainer:
+    container_name: Boilerplate-angular-docker-portainer
     build:
       context: .
       dockerfile: Dockerfile.dev
     volumes:
       - .:/app
-      - boilerplate-angular-volume:/app/node_modules
+      - Boilerplate-angular-docker-portainer-volume:/app/node_modules
     ports:
       - 4200:4200
     stdin_open: true
     tty: true
 
 volumes:
-  boilerplate-angular-volume:
+  Boilerplate-angular-docker-portainer-volume:
