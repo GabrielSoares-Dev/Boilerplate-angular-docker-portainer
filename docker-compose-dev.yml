@@ -1,6 +1,6 @@
 version: '3.5'
 services:
-  Boilerplate-angular-docker-portainer:
+  boilerplate-angular-docker-portainer:
     container_name: Boilerplate-angular-docker-portainer
     build:
       context: .
