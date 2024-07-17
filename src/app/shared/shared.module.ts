@@ -5,6 +5,8 @@ import { InputComponent } from '@shared/components/input/input.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgIconsModule } from '@ng-icons/core';
 import { cssSpinner } from '@ng-icons/css.gg';
+import { RouterLink } from '@angular/router';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
 import { ToastService } from '@services/toast/toast.service';
 import { ThemeService } from '@services/theme/theme.service';
@@ -28,6 +30,9 @@ import { HttpClient } from '@angular/common/http';
 @NgModule({
   declarations: [ButtonComponent, InputComponent],
   imports: [
+    NgxMaskDirective,
+    NgxMaskPipe,
+    RouterLink,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
@@ -49,6 +54,7 @@ import { HttpClient } from '@angular/common/http';
     ReactiveFormsModule,
     TranslateModule,
     CommonModule,
+    RouterLink,
   ],
   providers: [
     ToastLibService,
@@ -60,6 +66,7 @@ import { HttpClient } from '@angular/common/http';
     CookieService,
     TranslateService,
     UserService,
+    provideNgxMask(),
   ],
 })
 export class SharedModule {}
